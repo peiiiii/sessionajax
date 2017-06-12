@@ -14,7 +14,7 @@
                         $(this).addClass('error').after('<span class="error">不可是空的!</span>');
                     }
                     var accountVal = $('#account').val();
-                    console.log(accountVal);
+                    // console.log(accountVal);
                     $.post("query.jsp", { account : accountVal } ,
                     function(data){
                       $("#result").html(data);
@@ -23,7 +23,9 @@
                 });
                 $("input").focus(function(){
                     $(this).removeClass('error').next('span').remove();
-                });
+                })
+                /*
+
                 $("form").submit(function(){
                   // 取得表單欄位值
                   var passwdVal = $('#passwd').val();
@@ -36,6 +38,7 @@
                   });
                   return false; //達到非同步效果
                 });
+                */
               });
           </script>
     </head>    
